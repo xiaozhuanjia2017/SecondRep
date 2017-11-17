@@ -1,0 +1,228 @@
+@charset "utf-8";
+html{
+	height: 100%;
+}
+body{
+	margin: 0px;
+	height: 100%;
+}
+@media only screen and (min-width:500px) {
+	.box{
+		width: 320px;
+		height: 480px;
+		margin: 50px auto;
+		position: relative;
+		overflow: hidden;
+	}
+}
+@media only screen and (max-width: 500px) {
+	.box{
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+}
+.scene{
+	width: 100%;
+	height: 400%;
+	position: absolute;
+	top: 0%;
+}
+.page{
+	width: 100%;
+	height: 25%;
+	position: relative;
+}
+/*所有page下的 img元素都是绝对定位*/
+.page img{
+	position: absolute;
+}
+.page1{
+	background-color: #00CCFF;
+}
+.page2{
+	background-color: #000515;
+}
+.page3{
+	background-color: blue;
+}
+.page4{
+	background-color: yellow;
+}
+/*------------场景一----------------*/
+.page1-cloud{
+	width: 90%;
+	height: 90%;
+	left: 5%;
+	top: 5%;
+	animation: scale-anim 2s linear both infinite;
+}
+.page1-elements{
+	width: 100%;
+	height: 100%;
+	left: 0%;
+	top: 0%;
+	animation: scale-anim 2s linear both infinite;
+}
+.page1-text{
+	width: 60%;
+	left:20%;
+	top: 15%;
+}
+.page1-fw1{
+	width: 20%;
+	left: 10%;
+	top: 15%;
+	animation: rotate-anim 2s linear both infinite;
+}
+.page1-fw2{
+	width: 20%;
+	right: 20%;
+	top: 25%;
+	animation: rotate-anim 2s linear both infinite;
+}
+.page1-flight{
+	width: 0%;
+	left: 15%;
+	bottom: 30%;
+	animation: scale-anim 3s linear both infinite;
+}
+.page1-building{
+	width: 100%;
+	left: 0%;
+	bottom: 0%;
+	display: none;
+}
+/*缩放动画*/
+@keyframes scale-anim{
+	0%{}
+	50%{transform: scale(0.8);}
+	100%{}
+}
+/*摇摆动画*/
+@keyframes rotate-anim{
+	0%{}
+	25%{transform: rotate(-45deg);}
+	50%{}
+	75%{transform: rotate(45deg);}
+	100%{}
+}
+/*--------------场景二----------------*/
+.page2-bg{
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+.page2-text1{
+	width: 70%;
+	right: -70%;
+	top: 30%;
+}
+.page2-text2{
+	width: 70%;
+	right: -70%;
+	top: 50%
+}
+/*----------场景三--------------*/
+/****---小场景一---****/
+.page3-bg{
+	width: 100%;
+	height: 100%;
+}
+.page3-station{
+	width: 100%;
+	right: 0%;
+	bottom: 0%;
+}
+.page3-bus{
+	width: 70%;
+	left: 0%;
+	bottom: 5%;
+}
+.page3-avatar{
+	width: 30%;
+	right: -30%;
+	bottom: 10%;
+}
+.page3-title1{
+	width: 15%;
+	top: 5%;
+	left: 0%;
+	display: none;
+}
+.page3-title2{
+	width: 20%;
+	left: 0%;
+	top: 10%;
+	display: none;
+}
+/****---小场景二---****/
+.page3-wall{
+	height: 70%;
+	right: 0%;
+	bottom: 0%;
+	display: none;
+}
+.page3-avatar1{
+	width: 30%;
+	right: 10%;
+	bottom: 65%;
+	display: none;
+}
+.page3-space{
+	width: 40%;
+	top:20%;
+	left: 10%;
+	display: none;
+}
+.page3-where{
+	width: 50%;
+	left: 10%;
+	bottom: 10%;
+	display: none;
+}
+/*******---------场景四---------*****/
+.page4-bg{
+	width: 100%;
+	height: 100%;
+}
+.page4-title{
+	width: 40%;
+	right: 0%;
+	top: 20%;
+}
+.page4-light-off{
+	height: 70%;
+	left: 10%;
+	bottom: 0%;
+}
+.page4-on-bg{
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+/*-----------其他内容-----------*/
+.arrow{
+	position: absolute;
+	width: 20%;
+	left:40%;
+	bottom: 5%;
+	animation: arrow-anim 3s linear both infinite;
+}
+.music-btn{
+	position: absolute;
+	width: 12%;
+	right: 5%;
+	top: 5%;
+	animation: circle-anim 2s linear both infinite;
+}
+@keyframes circle-anim{
+	0%{}
+	100%{transform: rotate(360deg);}
+}
+@keyframes arrow-anim{
+	0%{}
+	50%{bottom: 8%;}
+	100%{}
+}
+
